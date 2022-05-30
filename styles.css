@@ -1,79 +1,107 @@
-*{
+* {
     box-sizing: border-box;
-}
-html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  html {
+    font-family: Vardana;
     color: #555;
     font-size: 16px;
-}
-
-body{
+    height: 100%;
+  }
+  body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
-.header{
+    justify-content: space-between;
+    height: 100%;
+  }
+  .header {
+    text-align: center;
     color: white;
     background-image: linear-gradient(60deg, red, orange);
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-.footer{
+  }
+  .footer {
     background-color: #E5E5E5;
     padding: 0.5em;
     text-align: center;
-}
-.main{
+    flex: 0 0 auto;
+  }
+  .navigation,
+  .section,
+  .news {
+    padding: 0.5em;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .main {
     display: flex;
-    flex-grow: 1;
-}
-
-.nav-list{
-    padding: 0px;
-}
-.navigation{
-    padding: 0.5em;
-    width: 20%;
-}
-.section{
-    padding: 0.5em;
-    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    width: 100vw;
+  }
+  .section {
+    width: 100%;
     font-size: 1.25em;
-}
-.css-units{
+  }
+  .news {
+    width: 100%;
+  }
+  .units-list {
+    line-height: 1.75em;
+  }
+  .css-units {
     color: #8B0000;
     background-color: #E5E5E5;
     font-size: 1.125em;
     font-weight: 700;
-}
-.news{
-    padding: 0.5em;
-    width: 20%;
-}
-.section__header{
-    text-align: center;
+  }
+  .section__header {
     font-size: 5vw;
-}
-.nav-list-item{
-    background-color:#808080;
-    color: white;
+    text-align: center;
+  }
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .nav-list-item {
+    display: flex;
+    align-items: center;
     height: 2em;
-    line-height: 2em;
-    margin-bottom: 0.5em;
-}
-
-.units-list{
-    line-height: 1.75em;
-}
-.nav-list-link{
-    width: 100%;
-    display: inline-block;
+    margin: 0.5em 0;
+    background-color: #808080;
+  }
+  .nav-list-link {
     color: white;
-    padding: 0 0.5em;
+    margin: 0.5em;
     text-decoration: none;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  img {
+    max-width: 100%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (min-width: 600px) {
+    .main {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .navigation {
+      width: 20%;
+    }
+    .section {
+      width: 80%;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+    .navigation {
+      width: 20%;
+    }
+    .section {
+      width: 60%;
+    }
+    .news {
+      width: 20%;
+    }
+}
